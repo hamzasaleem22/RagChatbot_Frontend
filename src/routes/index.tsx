@@ -85,8 +85,12 @@ function Index() {
               <Bot className="h-5 w-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-lg font-semibold tracking-tight text-foreground">RAG Assistant</h1>
-              <div className="flex items-center gap-1.5">
+              <h1 className="text-base font-semibold leading-tight tracking-tight text-foreground sm:text-lg">
+                Microsoft Annual 2025 Report
+              </h1>
+              <div className="flex items-center gap-2">
+                <span className="text-xs text-muted-foreground">RAG Chatbot</span>
+                <span className="text-muted-foreground/40">·</span>
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.8)]" />
@@ -95,6 +99,14 @@ function Index() {
               </div>
             </div>
           </div>
+          <button
+            type="button"
+            onClick={() => setMessages([])}
+            className="flex items-center gap-1.5 rounded-full border border-border bg-card/60 px-3 py-2 text-xs font-medium text-foreground transition-all hover:border-primary/60 hover:bg-card hover:shadow-[0_0_12px_rgba(124,58,237,0.25)]"
+          >
+            <Plus className="h-3.5 w-3.5" />
+            <span className="hidden sm:inline">New Chat</span>
+          </button>
         </div>
       </header>
 
