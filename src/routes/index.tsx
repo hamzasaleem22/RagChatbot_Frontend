@@ -170,6 +170,9 @@ function Index() {
               <span className="hidden sm:inline">Send</span>
             </button>
           </form>
+          <p className="pb-3 text-center text-[11px] text-muted-foreground/60">
+            Built by <span className="font-medium text-foreground/80">Hamza</span>
+          </p>
         </div>
       </main>
     </div>
