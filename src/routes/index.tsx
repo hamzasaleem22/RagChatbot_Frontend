@@ -120,10 +120,11 @@ function Index() {
                   <Sparkles className="h-9 w-9 text-primary-foreground" />
                 </div>
                 <h2 className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-2xl font-semibold text-transparent">
-                  Welcome to RAG Assistant
+                  Microsoft Annual 2025 Report
                 </h2>
-                <p className="mt-2 max-w-sm text-sm text-muted-foreground">
-                  Ask me anything. I'll search through knowledge and give you grounded answers.
+                <p className="mt-1 text-sm font-medium text-primary-glow">RAG Chatbot</p>
+                <p className="mt-3 max-w-sm text-sm text-muted-foreground">
+                  Ask anything about Microsoft's 2025 annual report. I'll search the document and give you grounded answers.
                 </p>
               </div>
             )}
