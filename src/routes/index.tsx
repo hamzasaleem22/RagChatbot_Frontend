@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import { Send, Loader2, Bot, Sparkles } from "lucide-react";
+import { Send, Loader2, Bot, Sparkles, Plus } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "RAG Assistant" },
-      { name: "description", content: "Chat with the RAG Assistant." },
+      { title: "Microsoft Annual 2025 Report RAG Chatbot" },
+      { name: "description", content: "RAG-powered chatbot for the Microsoft Annual 2025 Report." },
     ],
   }),
   component: Index,
