@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import { Send, Loader2, Bot, Sparkles } from "lucide-react";
+import { Send, Loader2, Bot, Sparkles, Plus } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "RAG Assistant" },
-      { name: "description", content: "Chat with the RAG Assistant." },
+      { title: "Microsoft Annual 2025 Report RAG Chatbot" },
+      { name: "description", content: "RAG-powered chatbot for the Microsoft Annual 2025 Report." },
     ],
   }),
   component: Index,
@@ -85,8 +85,12 @@ function Index() {
               <Bot className="h-5 w-5 text-primary-foreground" />
             </div>
             <div>
-              <h1 className="text-lg font-semibold tracking-tight text-foreground">RAG Assistant</h1>
-              <div className="flex items-center gap-1.5">
+              <h1 className="text-base font-semibold leading-tight tracking-tight text-foreground sm:text-lg">
+                Microsoft Annual 2025 Report
+              </h1>
+              <div className="flex items-center gap-2">
+                <span className="text-xs text-muted-foreground">RAG Chatbot</span>
+                <span className="text-muted-foreground/40">·</span>
                 <span className="relative flex h-2 w-2">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75" />
                   <span className="relative inline-flex h-2 w-2 rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.8)]" />
@@ -95,6 +99,14 @@ function Index() {
               </div>
             </div>
           </div>
+          <button
+            type="button"
+            onClick={() => setMessages([])}
+            className="flex items-center gap-1.5 rounded-full border border-border bg-card/60 px-3 py-2 text-xs font-medium text-foreground transition-all hover:border-primary/60 hover:bg-card hover:shadow-[0_0_12px_rgba(124,58,237,0.25)]"
+          >
+            <Plus className="h-3.5 w-3.5" />
+            <span className="hidden sm:inline">New Chat</span>
+          </button>
         </div>
       </header>
 
@@ -108,10 +120,11 @@ function Index() {
                   <Sparkles className="h-9 w-9 text-primary-foreground" />
                 </div>
                 <h2 className="bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-2xl font-semibold text-transparent">
-                  Welcome to RAG Assistant
+                  Microsoft Annual 2025 Report
                 </h2>
-                <p className="mt-2 max-w-sm text-sm text-muted-foreground">
-                  Ask me anything. I'll search through knowledge and give you grounded answers.
+                <p className="mt-1 text-sm font-medium text-primary-glow">RAG Chatbot</p>
+                <p className="mt-3 max-w-sm text-sm text-muted-foreground">
+                  Ask anything about Microsoft's 2025 annual report. I'll search the document and give you grounded answers.
                 </p>
               </div>
             )}
@@ -137,7 +150,7 @@ function Index() {
 
         {/* Input */}
         <div className="sticky bottom-0 border-t border-border/50 bg-background/40 backdrop-blur-xl">
-          <form onSubmit={handleSend} className="mx-auto flex max-w-3xl items-center gap-2 px-4 py-4">
+          <form onSubmit={handleSend} className="mx-auto flex max-w-3xl items-center gap-2 px-4 pt-4">
             <div className="group relative flex-1">
               <input
                 type="text"
@@ -157,6 +170,9 @@ function Index() {
               <span className="hidden sm:inline">Send</span>
             </button>
           </form>
+          <p className="pb-3 text-center text-[11px] text-muted-foreground/60">
+            Built by <span className="font-medium text-foreground/80">Hamza</span>
+          </p>
         </div>
       </main>
     </div>
