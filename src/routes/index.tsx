@@ -43,7 +43,10 @@ function Index() {
     try {
       const res = await fetch(API_URL, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          "ngrok-skip-browser-warning": "true",
+        },
         body: JSON.stringify({ question }),
       });
       if (!res.ok) throw new Error(`Request failed: ${res.status}`);
