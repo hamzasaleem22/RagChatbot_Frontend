@@ -150,7 +150,7 @@ function Index() {
 
         {/* Input */}
         <div className="sticky bottom-0 border-t border-border/50 bg-background/40 backdrop-blur-xl">
-          <form onSubmit={handleSend} className="mx-auto flex max-w-3xl items-center gap-2 px-4 py-4">
+          <form onSubmit={handleSend} className="mx-auto flex max-w-3xl items-center gap-2 px-4 pt-4">
             <div className="group relative flex-1">
               <input
                 type="text"
