@@ -12,7 +12,8 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const API_URL = "https://eloise-uncomplicated-nonhedonically.ngrok-free.dev/chat";
+// TODO: Replace with your new backend chat endpoint
+const API_URL = import.meta.env.VITE_CHAT_API_URL ?? "";
 
 type Message = {
   id: string;
@@ -45,11 +46,13 @@ function Index() {
     setLoading(true);
 
     try {
+      if (!API_URL) {
+        throw new Error("Backend URL not configured yet. Set VITE_CHAT_API_URL to your new endpoint.");
+      }
       const res = await fetch(API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "ngrok-skip-browser-warning": "true",
         },
         body: JSON.stringify({ question }),
       });
