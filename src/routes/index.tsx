@@ -46,11 +46,13 @@ function Index() {
     setLoading(true);
 
     try {
+      if (!API_URL) {
+        throw new Error("Backend URL not configured yet. Set VITE_CHAT_API_URL to your new endpoint.");
+      }
       const res = await fetch(API_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "ngrok-skip-browser-warning": "true",
         },
         body: JSON.stringify({ question }),
       });
