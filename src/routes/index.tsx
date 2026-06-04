@@ -12,7 +12,8 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const API_URL = "https://eloise-uncomplicated-nonhedonically.ngrok-free.dev/chat";
+// TODO: Replace with your new backend chat endpoint
+const API_URL = import.meta.env.VITE_CHAT_API_URL ?? "";
 
 type Message = {
   id: string;
