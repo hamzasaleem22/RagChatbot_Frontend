@@ -1,5 +1,5 @@
 # Picture of the Rag Chatbot
-   <img width="941" height="761" alt="Screenshot From 2026-06-01 16-42-23" src="https://github.com/user-attachments/assets/139ec757-371f-4102-bd68-97da204f1381" />
+<img width="1905" height="843" alt="Screenshot From 2026-06-04 11-55-45" src="https://github.com/user-attachments/assets/862d1ecc-52f9-4c49-b37f-f96dfbebc60b" />
 
    link is below:
      https://rag-pipeline.lovable.app
